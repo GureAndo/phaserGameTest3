@@ -3,6 +3,11 @@ import Phaser from 'phaser';
 //importation des fichier et scene donc le main a besoin
 import TitleScreen from './scenes/TitleScreen';
 import Game from './scenes/Game';
+import GameBackGround from './scenes/GameBackGround';
+import GameOver from './scenes/GameOver';
+import Preload from './scenes/Preaload';
+
+import * as SceneKeys from './consts/ScenesKeys'
 
 //la config du jeu 
 const config = {
@@ -24,9 +29,13 @@ const config = {
 //instancition de l'objet ('le jeu')
 const game = new Phaser.Game(config);
 //ajout des scene
-game.scene.add('titlescreen', TitleScreen);
-game.scene.add('game', Game);
+game.scene.add(SceneKeys.TitleScreen, TitleScreen);
+game.scene.add(SceneKeys.Game, Game);
+game.scene.add(SceneKeys.GameBackGround, GameBackGround);
+game.scene.add(SceneKeys.GameOver, GameOver);
+game.scene.add(SceneKeys.Preaload, Preload);
+
 //affichage des scene  
-//game.scene.start('titlescreen');
-game.scene.start('game');
+game.scene.start(SceneKeys.TitleScreen)
+// game.scene.start(SceneKeys.Game);
 

@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "parcel-bundler": "^1.12.5",
     "phaser": "^3.55.2",
     "webfontloader": "^1.6.28"
